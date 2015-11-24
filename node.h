@@ -11,7 +11,7 @@
 #define NODE
 
 struct node {
-	int *s;
+	int s[16];
 	int f, g, n, p;
 };
 

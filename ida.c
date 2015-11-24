@@ -17,7 +17,7 @@ struct node ida(struct node *N, int *b, int *b_,
 		unsigned long int *gen, unsigned long int *ex)
 {
 	int a = pstates(N->s) - N->p;
-	int tmp[16], i, hval;
+	int i, hval;
 	struct node N_;
 	(*ex)++;
 
@@ -52,9 +52,8 @@ struct node ida(struct node *N, int *b, int *b_,
 			if (N_.f < *b_) *b_ = N_.f;
 		} else {
 			for (i = 0; i < 16; i++) {
-				tmp[i] = N->s[i];
+				N_.s[i] = N->s[i];
 			}
-			N_.s = tmp;
 
 			if (!hval) {
 				N_.n = 0;

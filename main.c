@@ -30,10 +30,10 @@ int main(int argc, char **argv)
 	FILE *pfile;
 	pfile = fopen(argv[1], "r");
 
-	int si[16];
+	struct node N, Ret;
 	int i;
 	for (i = 0; i < 16; i++) {
-		fscanf(pfile, "%d", &si[i]);
+		fscanf(pfile, "%d", &(N.s[i]));
 	}
 
 	int *b, *b_;
@@ -42,13 +42,11 @@ int main(int argc, char **argv)
 	b_ = malloc(sizeof(int));
 	gen = malloc(sizeof(unsigned long int));
 	ex = malloc(sizeof(unsigned long int));
-	*b = h(si);
+	*b = h(N.s);
 	*gen = 0;
 	*ex = 0;
 
-	struct node N, Ret;
 	Ret.n = 1;
-	N.s = si;
 	N.g = 0;
 	N.p = 0;
 
@@ -56,7 +54,7 @@ int main(int argc, char **argv)
 
 	for (i = 0; i < 16; i++) {
 		if (!(i % 4)) printf("\n");
-		printf("%3.2d", si[i]);
+		printf("%3.2d", N.s[i]);
 	}
 
 	printf("\nInitial Estimate = %d\n", *b);
