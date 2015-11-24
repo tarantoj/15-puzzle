@@ -23,6 +23,6 @@ heuristic.o: heuristic.h heuristic.c
 	$(CC) $(FLAGS) -c heuristic.c
 
 test: ida
-	./ida 2.puzzle
+	./ida puzzles/2.puzzle
 clean:
 	rm ida wida *.o
