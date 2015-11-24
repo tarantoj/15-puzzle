@@ -40,8 +40,9 @@ int fz(int *s)
 /*
 int pstates(int *s)
 {
-	int a = fz(s);
-	int b = U+L+D+R;
+	int a, b, x, y;
+	a = fz(s);
+	b = U+L+D+R;
 
 	x = a % 4;
 	y = a / 4;
