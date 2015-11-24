@@ -1,5 +1,4 @@
-/* James Taranto <tarantoj@student.unimelb.edu.au>
- * ID: 640092
+/* James Taranto
  * October 2015
  *
  * Iterative Deepening A* Implementation
